@@ -1,0 +1,59 @@
+---
+layout: landing
+---
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>{{ site.title }}</h2>
+							<p>{{ site.description | markdownify }}</p>
+							<!-- <ul class="actions">
+								<li><a href="#" class="button special">Activate</a></li>
+							</ul> -->
+						</div>
+						<a href="#one" class="more scrolly">Latest Posts</a>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>We write about coffee and theology<br />
+								<em>but mostly theology</em></h2>
+								<p>Coffee Theology is the brainchild of Jay Morris.</p>
+							</header>
+							<ul class="icons major">
+								<li><span class="icon fa-coffee major style1"><span class="label">Lorem</span></span></li>
+								<li><span class="icon fa-heart major style1"><span class="label">Ipsum</span></span></li>
+								<li><span class="icon fa-fire major style1"><span class="label">Dolor</span></span></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper alt style2">
+						{% for post in site.posts limit: 3 %}
+						
+						<section class="spotlight">
+							<div class="image"><img src="{{post.featured_image}}" alt="" /></div><div class="content">
+								<h2><a href="{{post.url}}">{{ post.title  }} </a></h2>
+								{{ post.content | truncatewords: 30 | markdownify }}
+							</div>
+						</section>
+						{% endfor %}
+						
+					</section>
+
+				
+				<!-- CTA -->
+					<section id="cta" class="wrapper style4">
+						<div class="inner">
+							<header>
+								<h2>Arcue ut vel commodo</h2>
+								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
+							</header>
+							<ul class="actions vertical">
+								<li><a href="#" class="button fit special">Activate</a></li>
+								<li><a href="#" class="button fit">Learn More</a></li>
+							</ul>
+						</div>
+					</section>
